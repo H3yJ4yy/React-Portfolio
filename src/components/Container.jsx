@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import NavTabs from './NavTabs';
-import Footer from "./Footer";
+import Footer from './Footer'
 import Resume from '../pages/Resume';
 import About from '../pages/About';
 import Portfolio from '../pages/Portfolio';
@@ -28,6 +28,7 @@ export default function Container() {
     <div>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       <main className="mx-3">{renderPage()}</main>
+      <Footer/>
     </div>
   );
 }

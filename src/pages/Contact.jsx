@@ -1,99 +1,131 @@
 import { useState } from 'react';
 import { emailValidation } from '../utils/helpers'; // Importing the email validation function
 
-export default function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [nameError, setNameError] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [messageError, setMessageError] = useState('');
+export default function Contact() {
+  const [name, setname] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [nameError, setnameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  const handleInputChange = (e) => {
+    const typeInput = e.target.getAttribute("name");
+    const valueInput = e.target.value;
 
-  const handleEmailChange = (e) => {
-    const inputEmail = e.target.value;
-    setEmail(inputEmail);
-    // Validate email
-    if (!emailValidation(inputEmail)) {
-      setEmailError('Please enter a valid email address');
-    } else {
-      setEmailError('');
+    if (typeInput === "email") {
+      setEmail(valueInput);
+    } else if (typeInput === "name") {
+      setName(valueInput);
+    } else if (typeInput === "message") {
+      setMessage(valueInput);
     }
   };
 
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
+
+  const checkEmail = (e) => {
+    
+    const { target } = e;
+    const email = target.value;
+
+    if (!emailValidation(email)) {
+      setEmailError('Email is invalid');
+    } else  {
+      setEmailError('');
+      
+    }
   };
 
-  const handleSubmit = (e) => {
+
+
+  const handleBlur = (e) => {
+    const typeInput = e.target.getAttribute("name");
+    const valueInput = e.target.value;
+
+    switch (typeInput) {
+      case "name":
+        setnameError(valueInput ? "" : "Full Name is required");
+        break;
+      case "email":
+        setEmailError(valueInput ? "" : "Email is required");
+        break;
+      case "message":
+        setMessageError(valueInput ? "" : "Message is required");
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Reset previous errors
-    setNameError('');
-    setEmailError('');
-    setMessageError('');
+    setnameError(name ? "" : "Full Name is required");
+    setEmailError(email ? "" : "Email is required");
+    setMessageError(message ? "" : "Message is required");
 
-    if (name.trim() === '') {
-      setNameError('Please enter your name');
-    }
-    if (email.trim() === '') {
-      setEmailError('Please enter your email');
-    } else if (!emailValidation(email)) {
-      setEmailError('Please enter a valid email address');
-    }
-    if (message.trim() === '') {
-      setMessageError('Please enter a message');
+    if (!name || !email || !message) {
+      setErrorMessage("Please fill out all required fields.");
+      return;
     }
 
-    // If no errors, submit form
-    if (name && email && emailValidation(email) && message) {
-      setName('');
-      setEmail('');
-      setMessage('');
+    if (!emailValidation(email)) {
+      setErrorMessage("Email is invalid");
+      return;
     }
+
+    setErrorMessage("");
+
+    console.log("Form submitted:", { name, email, message });
+
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
+    <div className="formContainer">
+      <div className="headerMessage">
+        <p>Contact Me 💌</p>
+      </div>
+      <form className="form" onSubmit={handleFormSubmit}>
         <input
-          type="text"
-          id="name"
-          name="name"
           value={name}
-          onChange={handleNameChange}
-          required
+          name="name"
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          type="text"
+          placeholder="Full Name"
         />
-        {nameError && <p style={{ color: 'red' }}>{nameError}</p>}
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
+        {nameError && <p className="error-text">{nameError}</p>}
         <input
-          type="email"
-          id="email"
-          name="email"
           value={email}
-          onChange={handleEmailChange}
-          required
+          name="email"
+          onChange={handleInputChange}
+          onBlur={checkEmail}
+          type="email"
+          placeholder="Email"
         />
-        {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
+        {emailError && <p className="error-text">{emailError}</p>}
         <textarea
-          id="message"
-          name="message"
           value={message}
-          onChange={handleMessageChange}
-          required
-        />
-        {messageError && <p style={{ color: 'red' }}>{messageError}</p>}
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+          name="message"
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          placeholder="Message"
+        ></textarea>
+        {messageError && <p className="error-text">{messageError}</p>}
+        <button type="submit">Submit</button>
+      </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
+
+
+      <img src={kittylay}></img>
+    </div>
   );
 }
