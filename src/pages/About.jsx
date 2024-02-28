@@ -1,18 +1,18 @@
 export default function About() {
   return (
     <div>
-      <div class="nameHeader">
+      <div className="nameHeader">
         <h1>Andrea Gonzalez</h1>
       </div>
 
-      <div class="card">
-        <div class="card-header">Quote</div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
+      <div className="card">
+        <div className="card-header">Quote</div>
+        <div className="card-body">
+          <blockquote className="blockquote mb-0">
             <p>You are going to fail a lot before things work out. Even though you
           fail over and over again, you have to try every time. You can not quit
           because you are afraid you will fail.</p>
-            <footer class="blockquote-footer">
+            <footer className="blockquote-footer">
             -Zuko <cite title="Source Title"> Avatar: the Last Airbender</cite>
             </footer>
           </blockquote>

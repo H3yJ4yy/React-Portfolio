@@ -1,8 +1,11 @@
-import { useState } from 'react';
-import { emailValidation } from '../utils/helpers'; // Importing the email validation function
+import { useState, useRef } from 'react';
+import { emailValidation } from '../utils/helpers';
+import emailjs from '@emailjs/browser'
+import "../styles/style.css"
 
 export default function Contact() {
-  const [name, setname] = useState("");
+  const form = useRef();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [nameError, setnameError] = useState("");
@@ -61,7 +64,7 @@ export default function Contact() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    setnameError(name ? "" : "Full Name is required");
+    setnameError(name ? "" : "Name is required");
     setEmailError(email ? "" : "Email is required");
     setMessageError(message ? "" : "Message is required");
 
@@ -79,6 +82,20 @@ export default function Contact() {
 
     console.log("Form submitted:", { name, email, message });
 
+     emailjs
+      .sendForm('service_ln3ea0x', 'template_t1unmt5', form.current, {
+        publicKey: 'G9dwAepB9croVVtRF',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+
+    
     setName("");
     setEmail("");
     setMessage("");
@@ -87,9 +104,9 @@ export default function Contact() {
   return (
     <div className="formContainer">
       <div className="headerMessage">
-        <p>Contact Me 💌</p>
+        <h3>Contact Me 💌</h3>
       </div>
-      <form className="form" onSubmit={handleFormSubmit}>
+      <form ref={form} className="form" onSubmit={handleFormSubmit}>
         <input
           value={name}
           name="name"
@@ -123,9 +140,6 @@ export default function Contact() {
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
-
-
-      <img src={kittylay}></img>
     </div>
   );
 }

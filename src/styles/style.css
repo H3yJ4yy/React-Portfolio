@@ -1,0 +1,63 @@
+.icon{
+    width: 100px;
+
+}
+
+.skillsList{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+}
+
+.skillsIcons{
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: space-around;
+
+}
+
+.soloProjects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.collaborativeProjects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.form{
+    display: flex;
+    flex-wrap:  wrap;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.form input{
+    margin: 1em;
+}
+
+.form textarea{
+    margin: 1em;
+}
+ 
+.form button{
+    margin: 1em;
+}
+main{
+    min-height: 90vh;
+}
+.footerSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    font-size:x-large;
+}
