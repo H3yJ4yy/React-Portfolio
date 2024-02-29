@@ -258,7 +258,7 @@ export default function Portfolio() {
           <ul className="list-group list-group-flush">
             <li className="list-group-item">MySQL</li>
             <li className="list-group-item">Node</li>
-            <li className="list-group-item">Express</li>\
+            <li className="list-group-item">Express</li>
             <li className="list-group-item">Sequelize</li>
           </ul>
           <div className="card-body">
