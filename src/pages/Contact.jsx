@@ -106,6 +106,7 @@ export default function Contact() {
       <div className="headerMessage">
         <h3>Contact Me 💌</h3>
       </div>
+      <div className=''>
       <form ref={form} className="form" onSubmit={handleFormSubmit}>
         <input
           value={name}
@@ -134,7 +135,11 @@ export default function Contact() {
         ></textarea>
         {messageError && <p className="error-text">{messageError}</p>}
         <button type="submit">Submit</button>
+     
+     
+     
       </form>
+      </div>
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>

@@ -13,6 +13,7 @@ import react from "../styles/icons/React.png";
 import social from "../styles/applicationImages/socialNetworkApi.png";
 import ecommerce from "../styles/applicationImages/eCommerce.png";
 import tracker from "../styles/applicationImages/workplaceTracker.png";
+import mvc from "../styles/applicationImages/mvc.png"
 import secret from "../styles/applicationImages/secretSanta.png";
 import taste from "../styles/applicationImages/tasteBudsUnite.png";
 import "../styles/portfolio.css";
@@ -25,14 +26,19 @@ export default function Portfolio() {
       
 <h3 className="subTitle">Collaborative Projects</h3>
       <div className="collaborativeProjects" style={{ display: "flex" }}>
-        <div className="card" style={{ width: "25em" }}>
+        
+
+<div className="individualCard">
+  <div className="card" style={{ width: "25em" }}>
           <img
             src={secret}
             className="card-img-top"
             alt="SecretSanta home page"
+            
           />
+          
           <div className="card-body">
-            <h5 className="card-title">Secret Santa</h5>
+            <h4 className="card-title">Secret Santa</h4>
             <p className="card-text">
               This application allows the users to partake in Secret Santa
               without the hassle. With the help from our application, we are
@@ -60,11 +66,12 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
-
-        <div className="card" style={{ width: "25em" }}>
+</div>
+<div className="individualCard">
+   <div className="card" style={{ width: "25em" }}>
           <img src={taste} className="card-img-top" alt="TasteBuds homepage" />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
+            <h4 className="card-title">Taste Buds</h4>
             <p className="card-text">
               {" "}
               This applicstion allows the user to look for recepies based on the
@@ -92,6 +99,8 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
+</div>
+       
       </div>
 
 
@@ -158,6 +167,7 @@ export default function Portfolio() {
       <div
         className="soloProjects"
       >
+        <div className="individualCard">
         <div className="card" style={{ width: "25em" }}>
           <img
             src={social}
@@ -193,7 +203,9 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
-
+  </div>
+       
+        <div className="individualCard">
         <div className="card" style={{ width: "25em" }}>
           <img
             src={ecommerce}
@@ -231,7 +243,9 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
-
+  </div>
+        
+        <div className="individualCard">
         <div className="card" style={{ width: "25em" }}>
           <img src={tracker} className="card-img-top" alt="..." />
           <div className="card-body">
@@ -242,9 +256,10 @@ export default function Portfolio() {
             </p>
           </div>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">An item</li>
-            <li className="list-group-item">A second item</li>
-            <li className="list-group-item">A third item</li>
+            <li className="list-group-item">MySQL</li>
+            <li className="list-group-item">Node</li>
+            <li className="list-group-item">Express</li>\
+            <li className="list-group-item">Sequelize</li>
           </ul>
           <div className="card-body">
             <a href="#" className="card-link">
@@ -255,30 +270,36 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
-
+  </div>
+        
+        <div className="individualCard">
         <div className="card" style={{ width: "25em" }}>
-          <img src="..." className="card-img-top" alt="..." />
+          <img src={mvc} className="card-img-top" alt="mvc screenshot" />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
+            <h5 className="card-title">MVC Blog</h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            This is a blogcite dedicated to talk all things tech. Userews are able to inteact with one another and even learn from one another!
             </p>
           </div>
           <ul className="list-group list-group-flush">
+            <li className="list-group-item">Bcrypt</li>
+            <li className="list-group-item">DotEnv</li>
+            <li className="list-group-item">Express</li>
             <li className="list-group-item">An item</li>
-            <li className="list-group-item">A second item</li>
-            <li className="list-group-item">A third item</li>
+            <li className="list-group-item">MySQL2</li>
+            <li className="list-group-item">Sequelize</li>
           </ul>
           <div className="card-body">
-            <a href="#" className="card-link">
+            <a href="https://github.com/H3yJ4yy/Blog-Website" className="GitHub">
               Card link
             </a>
-            <a href="#" className="card-link">
+            <a href="diabled" className="card-link">
               Another link
             </a>
           </div>
         </div>
+  </div>
+        
       </div>
     </div>
   );

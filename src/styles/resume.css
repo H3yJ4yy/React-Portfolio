@@ -6,3 +6,22 @@
     --darkgreen: #173b34;
 
 }
+.subHead{
+    text-align: center;
+    color: var(--linen);
+    margin-top:1em;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.individual{
+    justify-content: space-around;
+    margin: 2rem;
+}
+.downloadBtn{
+    display: flex;
+    flex: wrap;
+    outline: none;
+    text-decoration: none;
+    justify-content: center;
+}

@@ -11,11 +11,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-weight:400;
+    color: var(--beige);
 }
 
 .icon{
     width: 100px;
-
+    background-color: var(--linen);
+    
 }
 
 .skillsList{
@@ -26,26 +29,63 @@
     flex-direction: column;
     justify-content: space-between ;
     box-shadow: none;
-    border: none;
+    background-color: var(--linen);
+    
+    padding: 2rem;
+    border-radius: 8px;;
 }
 
 .skillsIcons{
     display: flex;
     flex-wrap:  wrap;
     justify-content: space-around;
-
+    background-color: #2c685c00;
 }
 
 .soloProjects{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .collaborativeProjects{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 2rem;
+}
+.individualCard{
+    margin: 2em;
+}
+.card-body> h4{
+    background-color: var(--linen);
+    text-align: center;
+    
+}
+.card-body> h5{
+    background-color: var(--linen);
+    text-align: center;
+    
+}
+.card-body> p{
+    background-color: var(--linen);
+    text-align: center;
+}
+.card-body> a{
+    background-color: var(--linen);
+}
+.card-body> a{
+    text-decoration: none;
+    color: var(--darkgreen);
+}
+.list-group{
+    text-align: center;
 
+}
+.skillName{
+    background-color: var(--linen);
+    color: var(--black);
+    text-align: center;
+    font-size: 1.3rem;
+   
 }

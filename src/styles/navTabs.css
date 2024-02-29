@@ -13,7 +13,7 @@ a.nav-link{
     border-radius: 8%;
     
 }
-.nav-link > .active > a{
+a.nav-link, a.active{
     color: var(--beige);
 
 }
