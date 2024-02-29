@@ -69,3 +69,12 @@ main{
     border-radius: 1rem;
     text-align: center;
 }
+.success-text{
+    background-color: var(--beige);
+    color: #012a15;
+    font-size: x-larger;
+    font-weight: 300;
+    margin: 2em;
+    border-radius: 1rem;
+    text-align: center;
+}

@@ -12,6 +12,7 @@ export default function Contact() {
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleInputChange = (e) => {
     const typeInput = e.target.getAttribute("name");
@@ -82,19 +83,23 @@ export default function Contact() {
 
     console.log("Form submitted:", { name, email, message });
 
-     emailjs
+    emailjs
       .sendForm('service_ln3ea0x', 'template_t1unmt5', form.current, {
         publicKey: 'G9dwAepB9croVVtRF',
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          setEmailSent(true);
+          setTimeout(() => {
+            setEmailSent(false); 
+          }, 5000); s
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setErrorMessage("Failed to send email. Please try again later.");
         },
       );
-
     
     setName("");
     setEmail("");
@@ -143,6 +148,11 @@ export default function Contact() {
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
+      {emailSent && (
+        <div>
+          <p className="success-text">Your email has been sent successfully!</p>
         </div>
       )}
     </div>
