@@ -16,23 +16,24 @@
 }
 
 .icon{
-    width: 100px;
+    width: 9vw;
     background-color: var(--linen);
-    
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: center;
 }
 
 .skillsList{
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between ;
+    justify-content: space-around ;
     box-shadow: none;
     background-color: var(--linen);
-    
-    padding: 2rem;
-    border-radius: 8px;;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 .skillsIcons{
@@ -45,7 +46,8 @@
 .soloProjects{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
 .collaborativeProjects{
@@ -55,7 +57,10 @@
     padding: 2rem;
 }
 .individualCard{
-    margin: 2em;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .card-body> h4{
     background-color: var(--linen);
@@ -78,6 +83,7 @@
     text-decoration: none;
     color: var(--darkgreen);
 }
+
 .list-group{
     text-align: center;
 
@@ -89,3 +95,4 @@
     font-size: 1.3rem;
    
 }
+

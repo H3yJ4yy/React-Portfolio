@@ -29,7 +29,7 @@ export default function Portfolio() {
         
 
 <div className="individualCard">
-  <div className="card" style={{ width: "25em" }}>
+  <div className="card" style={{ width: "20em" }}>
           <img
             src={secret}
             className="card-img-top"
@@ -68,7 +68,7 @@ export default function Portfolio() {
         </div>
 </div>
 <div className="individualCard">
-   <div className="card" style={{ width: "25em" }}>
+   <div className="card" style={{ width: "20em" }}>
           <img src={taste} className="card-img-top" alt="TasteBuds homepage" />
           <div className="card-body">
             <h4 className="card-title">Taste Buds</h4>
@@ -168,7 +168,7 @@ export default function Portfolio() {
         className="soloProjects"
       >
         <div className="individualCard">
-        <div className="card" style={{ width: "25em" }}>
+        <div className="card" style={{ width: "20em" }}>
           <img
             src={social}
             className="card-img-top"
@@ -206,7 +206,7 @@ export default function Portfolio() {
   </div>
        
         <div className="individualCard">
-        <div className="card" style={{ width: "25em" }}>
+        <div className="card" style={{ width: "20em" }}>
           <img
             src={ecommerce}
             className="card-img-top"
@@ -246,7 +246,7 @@ export default function Portfolio() {
   </div>
         
         <div className="individualCard">
-        <div className="card" style={{ width: "25em" }}>
+        <div className="card" style={{ width: "20em" }}>
           <img src={tracker} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Workplace Tracker</h5>
@@ -273,7 +273,7 @@ export default function Portfolio() {
   </div>
         
         <div className="individualCard">
-        <div className="card" style={{ width: "25em" }}>
+        <div className="card" style={{ width: "20em" }}>
           <img src={mvc} className="card-img-top" alt="mvc screenshot" />
           <div className="card-body">
             <h5 className="card-title">MVC Blog</h5>
