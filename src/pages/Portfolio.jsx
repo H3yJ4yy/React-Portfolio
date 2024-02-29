@@ -262,11 +262,11 @@ export default function Portfolio() {
             <li className="list-group-item">Sequelize</li>
           </ul>
           <div className="card-body">
-            <a href="#" className="card-link">
-              Card link
+            <a href="https://github.com/H3yJ4yy/workplace-tracker" className="card-link">
+              GitHub
             </a>
-            <a href="#" className="card-link">
-              Another link
+            <a href="https://github-production-user-asset-6210df.s3.amazonaws.com/143395836/289316184-707265cd-0148-46af-b123-9d8170d9b40d.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240229%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240229T133911Z&X-Amz-Expires=300&X-Amz-Signature=8d2cc99fa21779b657c8698c5b698d7f363b14598ab335fe3af61e19df21f8f9&X-Amz-SignedHeaders=host&actor_id=143395836&key_id=0&repo_id=725618287" className="card-link">
+              Demo Video
             </a>
           </div>
         </div>
@@ -291,7 +291,7 @@ export default function Portfolio() {
           </ul>
           <div className="card-body">
             <a href="https://github.com/H3yJ4yy/Blog-Website" className="GitHub">
-              Card link
+              GitHub Link
             </a>
             <a href="diabled" className="card-link">
               Another link
