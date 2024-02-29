@@ -1,63 +1,26 @@
-.icon{
-    width: 100px;
+:root{
+    --black: #000000;
+    --beige: #bdad90;
+    --linen: #f4ebe1;
+    --slate: #2d504f;
+    --darkgreen: #173b34;
 
 }
 
-.skillsList{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between ;
-}
+*{
+    font-family: "Gafata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--slate) ;
+  }
 
-.skillsIcons{
-    display: flex;
-    flex-wrap:  wrap;
-    justify-content: space-around;
-
-}
-
-.soloProjects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-.collaborativeProjects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-.form{
-    display: flex;
-    flex-wrap:  wrap;
-    flex-direction: column;
-    padding: 2em;
-}
-
-.form input{
-    margin: 1em;
-}
-
-.form textarea{
-    margin: 1em;
-}
- 
-.form button{
-    margin: 1em;
-}
-main{
-    min-height: 90vh;
+a.link{
+    text-decoration: none;
+    background-color: var(--darkgreen);
+    color: var(--linen);
+    padding:.5em;
+    border-radius: 8%;
 }
 .footerSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 100px;
-    font-size:x-large;
+    color: var(--linen);
 }

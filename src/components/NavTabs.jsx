@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../styles/navTabs.css"
 
 function NavTabs({ currentPage, handlePageChange }) {
   return (
@@ -11,7 +11,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#About"
           onClick={() => handlePageChange('About')}
-          className={`nav-link anchorTags ${currentPage === 'About' ? 'active' : ''}`}
+          className={`nav-link anchorTags ${currentPage === 'About' ? ' nav-link active' : 'nav-link'}`}
         >
           About
         </a>
@@ -20,7 +20,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#Portfolio"
           onClick={() => handlePageChange('Portfolio')}
-          className={`nav-link anchorTags ${currentPage === 'Portfolio' ? 'active' : ''}`}
+          className={`nav-link anchorTags ${currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}`}
         >
           Portfolio
         </a>
@@ -29,7 +29,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#Resume"
           onClick={() => handlePageChange('Resume')}
-          className={`nav-link anchorTags ${currentPage === 'Resume' ? 'active' : ''}`}
+          className={`nav-link anchorTags ${currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}`}
         >
           Resume
         </a>
@@ -38,7 +38,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         <a
           href="#Contact"
           onClick={() => handlePageChange('Contact')}
-          className={`nav-link anchorTags ${currentPage === 'Contact' ? 'active' : ''}`}
+          className={`nav-link anchorTags ${currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}`}
         >
           Contact
         </a>

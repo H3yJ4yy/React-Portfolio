@@ -1,0 +1,38 @@
+:root{
+    --black: #000000;
+    --beige: #bdad90;
+    --linen: #f4ebe1;
+    --slate: #2d504f;
+    --darkgreen: #173b34;
+
+}
+
+.form{
+    
+    display: flex;
+    flex-wrap:  wrap;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.form input{
+    margin: 1em;
+}
+
+.form textarea{
+    margin: 1em;
+}
+ 
+.form button{
+    margin: 1em;
+}
+main{
+    min-height: 90vh;
+}
+.footerSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    font-size:x-large;
+}

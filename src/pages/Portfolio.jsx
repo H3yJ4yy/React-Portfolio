@@ -15,14 +15,90 @@ import ecommerce from "../styles/applicationImages/eCommerce.png";
 import tracker from "../styles/applicationImages/workplaceTracker.png";
 import secret from "../styles/applicationImages/secretSanta.png";
 import taste from "../styles/applicationImages/tasteBudsUnite.png";
-import "../styles/style.css";
+import "../styles/portfolio.css";
 
 export default function Portfolio() {
   return (
     <div className="porfolio">
-      <h3 className="subTittle">Skills</h3>
+
+
+      
+<h3 className="subTitle">Collaborative Projects</h3>
+      <div className="collaborativeProjects" style={{ display: "flex" }}>
+        <div className="card" style={{ width: "25em" }}>
+          <img
+            src={secret}
+            className="card-img-top"
+            alt="SecretSanta home page"
+          />
+          <div className="card-body">
+            <h5 className="card-title">Secret Santa</h5>
+            <p className="card-text">
+              This application allows the users to partake in Secret Santa
+              without the hassle. With the help from our application, we are
+              able to simplify the holiday season by helping you pick your
+              chosen person, and be able to create a wishlist
+            </p>
+          </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Bcrypt</li>
+            <li className="list-group-item">express</li>
+            <li className="list-group-item">MySQL</li>
+          </ul>
+          <div className="card-body">
+            <a
+              href="https://github.com/H3yJ4yy/Secret-Santa"
+              className="card-link"
+            >
+              GitHub Repo
+            </a>
+            <a
+              href="https://serene-island-03400-7f50cf6a1d37.herokuapp.com/"
+              className="card-link"
+            >
+              Live Link
+            </a>
+          </div>
+        </div>
+
+        <div className="card" style={{ width: "25em" }}>
+          <img src={taste} className="card-img-top" alt="TasteBuds homepage" />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">
+              {" "}
+              This applicstion allows the user to look for recepies based on the
+              type of cuisine, the type of food, and even helps them pair it
+              with a glass of wine.{" "}
+            </p>
+          </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Third part API's</li>
+            <li className="list-group-item">Materialize</li>
+            <li className="list-group-item">Javascript</li>
+          </ul>
+          <div className="card-body">
+            <a
+              href="https://github.com/H3yJ4yy/TasteBudsUnite"
+              className="card-link"
+            >
+              GitHub Repo
+            </a>
+            <a
+              href="https://tishaanderson.github.io/TasteBudsUnite/"
+              className="card-link"
+            >
+              Live Web
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+<h3 className="subTitle">Skills</h3>
       <div className="skillsList">
-        <ul className="list-group list-group-horizontal-sm skillsIcons">
+        <ul className=" list-group-horizontal-sm skillsIcons">
           <li className="list-group-item">
             <img src={api} alt="icon" className="icon" />
             <p className="skillName">API</p>
@@ -40,7 +116,7 @@ export default function Portfolio() {
             <p className="skillName">Express.js</p>
           </li>
         </ul>
-        <ul className="list-group list-group-horizontal-sm skillsIcons">
+        <ul className=" list-group-horizontal-sm skillsIcons">
           <li className="list-group-item">
             <img src={graphql} alt="icon" className="icon" />
             <p className="skillName">GrapgQl</p>
@@ -58,7 +134,7 @@ export default function Portfolio() {
             <p className="skillName">JavaScript</p>
           </li>
         </ul>
-        <ul className="list-group list-group-horizontal-sm skillsIcons">
+        <ul className=" list-group-horizontal-sm skillsIcons">
           <li className="list-group-item">
             <img src={mongodb} alt="icon" className="icon" />
             <p className="skillName">MongoDB</p>
@@ -78,11 +154,11 @@ export default function Portfolio() {
         </ul>
       </div>
 
-      <h3 className="subTittle">Solo Projects</h3>
+      <h3 className="subTitle">Solo Projects</h3>
       <div
         className="soloProjects"
       >
-        <div className="card" style={{ width: "18em" }}>
+        <div className="card" style={{ width: "25em" }}>
           <img
             src={social}
             className="card-img-top"
@@ -118,7 +194,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="card" style={{ width: "18em" }}>
+        <div className="card" style={{ width: "25em" }}>
           <img
             src={ecommerce}
             className="card-img-top"
@@ -156,7 +232,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="card" style={{ width: "18em" }}>
+        <div className="card" style={{ width: "25em" }}>
           <img src={tracker} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Workplace Tracker</h5>
@@ -180,7 +256,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="card" style={{ width: "18em" }}>
+        <div className="card" style={{ width: "25em" }}>
           <img src="..." className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
@@ -200,77 +276,6 @@ export default function Portfolio() {
             </a>
             <a href="#" className="card-link">
               Another link
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <h3 className="subTittle">Collaborative Projects</h3>
-      <div className="collaborativeProjects" style={{ display: "flex" }}>
-        <div className="card" style={{ width: "18em" }}>
-          <img
-            src={secret}
-            className="card-img-top"
-            alt="SecretSanta home page"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Secret Santa</h5>
-            <p className="card-text">
-              This application allows the users to partake in Secret Santa
-              without the hassle. With the help from our application, we are
-              able to simplify the holiday season by helping you pick your
-              chosen person, and be able to create a wishlist
-            </p>
-          </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item">Bcrypt</li>
-            <li className="list-group-item">express</li>
-            <li className="list-group-item">MySQL</li>
-          </ul>
-          <div className="card-body">
-            <a
-              href="https://github.com/H3yJ4yy/Secret-Santa"
-              className="card-link"
-            >
-              GitHub Repo
-            </a>
-            <a
-              href="https://serene-island-03400-7f50cf6a1d37.herokuapp.com/"
-              className="card-link"
-            >
-              Live Link
-            </a>
-          </div>
-        </div>
-
-        <div className="card" style={{ width: "18em" }}>
-          <img src={taste} className="card-img-top" alt="TasteBuds homepage" />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              {" "}
-              This applicstion allows the user to look for recepies based on the
-              type of cuisine, the type of food, and even helps them pair it
-              with a glass of wine.{" "}
-            </p>
-          </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item">Third part API's</li>
-            <li className="list-group-item">Materialize</li>
-            <li className="list-group-item">Javascript</li>
-          </ul>
-          <div className="card-body">
-            <a
-              href="https://github.com/H3yJ4yy/TasteBudsUnite"
-              className="card-link"
-            >
-              GitHub Repo
-            </a>
-            <a
-              href="https://tishaanderson.github.io/TasteBudsUnite/"
-              className="card-link"
-            >
-              Live Web
             </a>
           </div>
         </div>

@@ -1,0 +1,47 @@
+:root{
+    --black: #000000;
+    --beige: #bdad90;
+    --linen: #f4ebe1;
+    --slate: #2d504f;
+    --darkgreen: #173b34;
+    --tDarkgreen: #173b3478;
+}
+*{
+  font-family: "Gafata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.nameHeader,  h1, h2{
+    color: var(--grey);
+    text-align: right;
+}
+.card-body, .quote {
+    background-color: var(--linen);
+}
+.quoteCard{
+    margin: 3.5em;;
+}
+.nameHeader{
+    font-size: larger;
+    font-weight: 300;
+    color: var(--beige);
+
+}
+.scholarAboutMe{
+    margin: 2rem;
+    padding: .5%;
+    border-radius: 1.2rem;
+    background-color: var(--tDarkgreen);
+    color:var(--linen);
+    text-align: center;
+    font-size: large;
+}
+.funAboutMe{
+   margin: 2rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    background-color: var(--tDarkgreen);
+    color:var(--linen);
+    text-align: center;
+    font-size: large;
+}

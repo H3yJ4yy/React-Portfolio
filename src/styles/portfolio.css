@@ -1,0 +1,51 @@
+:root{
+    --black: #000000;
+    --beige: #bdad90;
+    --linen: #f4ebe1;
+    --slate: #2d504f;
+    --darkgreen: #173b34;
+
+}
+
+.subTitle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon{
+    width: 100px;
+
+}
+
+.skillsList{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    box-shadow: none;
+    border: none;
+}
+
+.skillsIcons{
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: space-around;
+
+}
+
+.soloProjects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.collaborativeProjects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
