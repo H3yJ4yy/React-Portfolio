@@ -290,12 +290,12 @@ export default function Portfolio() {
             <li className="list-group-item">Sequelize</li>
           </ul>
           <div className="card-body">
-            <a href="https://github.com/H3yJ4yy/Blog-Website" className="GitHub">
+            <a href="https://github.com/H3yJ4yy/Blog-Website" className="card-link">
               GitHub Link
             </a>
-            <a href="diabled" className="card-link">
+            {/* <a href="#" className="card-link">
               Another link
-            </a>
+            </a> */}
           </div>
         </div>
   </div>
